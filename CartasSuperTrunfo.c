@@ -2,42 +2,47 @@
 
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    printf ("Super Trunfo Paises \n");
     
-    char codigo[6];
-    int populacao;
-    float area;
-    float pib;
-    int pontos_turisticos;
-    char cidade[32];
+    char estado1[50], codigo1[10], nome_cidade1[50];
+    char estado2[50], codigo2[10], nome_cidade2[50];
+    int populacao1, populacao2;
 
     
-    printf("Digite o código da cidade (ex: A01)\n");
-    scanf("%s", &codigo);   
-    
-    printf("Digite a População \n");
-    scanf("%d", &populacao);
+    printf("Digite os dados da Carta 1:\n");
+    printf("Estado: ");
+    scanf(" %s", &estado1);
+    printf("Código da carta: ");
+    scanf("%s", &codigo1);
+    printf("Nome da cidade: ");
+    scanf("%s", &nome_cidade1);
+    printf("População: ");
+    scanf("%d", &populacao1);
 
-    printf("Digite a aréa \n");
-    scanf(" %f", &area);
 
-    printf("Digite o PIB \n");
-    scanf(" %f", &pib);
+    printf("Digite os dados da Carta 2:\n");
+    printf("Estado: ");
+    scanf(" %s", estado2);
+    printf("Código da carta: ");
+    scanf("%s", codigo2);
+    printf("Nome da cidade: ");
+    scanf(" %s", nome_cidade2);
+    printf("População: ");
+    scanf(" %d", &populacao2);
 
-    printf("Digite os pontos turisticos \n");
-    scanf("%f", &pontos_turisticos);
 
-    printf("Digite a cidade \n");
-    scanf("%f", &cidade);
+    printf("\nComparação de cartas (Atributo: População):\n");
+    printf("Carta 1 - %s (%s): %d\n", nome_cidade1, estado1, populacao1);
+    printf("Carta 2 - %s (%s): %d\n", nome_cidade2, estado2, populacao2);
+    if (populacao1 > populacao2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", nome_cidade1);
+    } else if (populacao1 < populacao2) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", nome_cidade2);
+    } else {
+        printf("Resultado: Empate!\n");
+    }
 
-    printf("\nResultado das cartas\n");
-    printf("Código: %s\n", codigo);
-    printf("Cidade: %d\n", cidade);
-    printf("População: %d\n", populacao);
-    printf("Área: %f\n", area);
-    printf("PIB: %f\n", pib);
-    printf("Pontos Turísticos: %d\n", pontos_turisticos);
 
     return 0;
+
+
 }
